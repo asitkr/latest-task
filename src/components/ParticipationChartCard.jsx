@@ -51,7 +51,7 @@ const ParticipationChartCard = () => {
           </PieChart>
         </ResponsiveContainer>
 
-        <div className="text-left w-40 mt-3 space-y-1 text-xs text-gray-700">
+        <div className="text-left w-28 mt-3 space-y-1 text-xs text-gray-700">
         {data.map((entry, index) => (
           <div key={entry.name} className="w-full flex items-center gap-2">
             <span
