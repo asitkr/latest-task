@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: auto;
 }
 
 @layer utilities {
@@ -37,4 +38,26 @@ html {
             transform: rotate(.5turn);
         }
     }
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;            /* "auto" or "thin" */
+  scrollbar-color: #020234 #ebebeb; /* thumb color | track color */
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ebebeb;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #020234;
+  border-radius: 10px;
 }
