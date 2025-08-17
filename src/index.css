@@ -8,43 +8,45 @@ html {
 }
 
 @layer utilities {
-    .loader {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        color: #2563eb;
-        /* Tailwind blue-600 */
-        background:
-            linear-gradient(currentColor 0 0) center/100% 4px,
-            linear-gradient(currentColor 0 0) center/4px 100%,
-            radial-gradient(farthest-side, #0000 calc(100% - 7px), currentColor calc(100% - 6px)),
-            radial-gradient(circle 7px, currentColor 94%, #0000 0);
-        background-repeat: no-repeat;
-        animation: spin-custom 1s infinite linear;
-        position: relative;
-    }
+  .loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: #2563eb;
+    /* Tailwind blue-600 */
+    background:
+      linear-gradient(currentColor 0 0) center/100% 4px,
+      linear-gradient(currentColor 0 0) center/4px 100%,
+      radial-gradient(farthest-side, #0000 calc(100% - 7px), currentColor calc(100% - 6px)),
+      radial-gradient(circle 7px, currentColor 94%, #0000 0);
+    background-repeat: no-repeat;
+    animation: spin-custom 1s infinite linear;
+    position: relative;
+  }
 
-    .loader::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        background: inherit;
-        transform: rotate(45deg);
-    }
+  .loader::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+    transform: rotate(45deg);
+  }
 
-    @keyframes spin-custom {
-        to {
-            transform: rotate(.5turn);
-        }
+  @keyframes spin-custom {
+    to {
+      transform: rotate(.5turn);
     }
+  }
 }
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
-  scrollbar-width: thin;            /* "auto" or "thin" */
-  scrollbar-color: #020234 #ebebeb; /* thumb color | track color */
+  scrollbar-width: thin;
+  /* "auto" or "thin" */
+  scrollbar-color: #020234 #ebebeb;
+  /* thumb color | track color */
 }
 
 /* Chrome, Edge, and Safari */
@@ -60,4 +62,35 @@ html {
 *::-webkit-scrollbar-thumb {
   background-color: #020234;
   border-radius: 10px;
+}
+
+/* Not Found Page */
+.backtohome {
+  @apply relative inline-block border border-white mt-96 px-10 py-4 font-bold text-xl text-white rounded-xl overflow-hidden;
+}
+
+.backtohome .original {
+  @apply bg-white text-[#020234] absolute inset-0 grid place-content-center transition-transform duration-200;
+}
+
+.backtohome:hover .original {
+  transform: translateY(100%);
+}
+
+.backtohome .letters {
+  @apply inline-flex relative z-10;
+}
+
+.backtohome span {
+  @apply opacity-0 transition duration-200;
+  transform: translateY(-15px);
+}
+
+.backtohome span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+.backtohome:hover span {
+  @apply opacity-100;
+  transform: translateY(0);
 }

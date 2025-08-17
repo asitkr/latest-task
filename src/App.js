@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
 
 // Lazy load pages and layout
-const Layout = lazy(() => import("./components/layout/Layout"));
 const Hero = lazy(() => import("./pages/Hero"));
+const PageNotFound = lazy(() => import("./pages/PageNotFound"));
+const Layout = lazy(() => import("./components/layout/Layout"));
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Hero />} />
           </Route>
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>
     </Router>
