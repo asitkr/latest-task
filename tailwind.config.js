@@ -8,22 +8,20 @@ export default {
     extend: {
       keyframes: {
         astronautFly: {
-          "0%": { left: "-100px", transform: "rotate(0deg)" },
-          "25%": { top: "50%", transform: "rotate(30deg)" },
-          "50%": { top: "55%", transform: "rotate(45deg)" },
-          "75%": { top: "60%", transform: "rotate(30deg)" },
-          "100%": { left: "110%", transform: "rotate(45deg)" },
+          "0%": { transform: "translateX(0) translateY(0) rotate(0deg)" },
+          "25%": { transform: "translateX(25vw) translateY(-20px) rotate(20deg)" },
+          "50%": { transform: "translateX(50vw) translateY(20px) rotate(40deg)" },
+          "75%": { transform: "translateX(75vw) translateY(-20px) rotate(20deg)" },
+          "100%": { transform: "translateX(110vw) translateY(0) rotate(40deg)" },
         },
         starTwinkle: {
-          "0%, 100%": { background: "rgba(255,255,255,0.4)" },
-          "25%": { background: "rgba(255,255,255,0.8)" },
-          "50%": { background: "rgba(255,255,255,1)" },
-          "75%": { background: "rgba(255,255,255,0.8)" },
+          "0%, 100%": { opacity: "0.2" },
+          "50%": { opacity: "1" },
         },
       },
       animation: {
-        astronautFly: "astronautFly 6s infinite linear",
-        starTwinkle: "starTwinkle 3s infinite linear",
+        astronautFly: "astronautFly 12s linear infinite",
+        starTwinkle: "starTwinkle 3s infinite ease-in-out",
       },
     },
   },

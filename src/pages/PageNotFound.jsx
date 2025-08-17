@@ -41,20 +41,21 @@ const PageNotFound = () => {
         >
             {/* Text */}
             <div className="absolute top-10 text-center text-white">
-                <div className="text-xl tracking-widest">ERROR</div>
-                <h1 className="text-7xl font-bold">404</h1>
+                <div className="text-2xl tracking-widest">ERROR</div>
+                <h1 className="text-9xl font-bold">404</h1>
                 <hr className="my-2 border-gray-500" />
-                <div className="text-xl">Page Not Found</div>
+                <div className="text-3xl">Page Not Found</div>
             </div>
 
             {/* Astronaut */}
-            <div className="absolute top-1/2">
+            <div className="absolute top-1/2 left-0 -translate-y-1/2">
                 <img
-                    src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png"
+                    src="/assets/bgImages/space-astronaut.png"
                     alt="astronaut"
-                    className="w-24 animate-astronautFly"
+                    className="w-40 animate-astronautFly"
                 />
             </div>
+
 
             <Link to="/" className="backtohome">
                 <div className="original">Back To Home</div>
