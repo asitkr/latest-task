@@ -6,7 +6,7 @@ const RightSidebar = lazy(() => import("./../components/RightSidebar"));
 
 const Hero = () => {
     return (
-        <div className="flex w-full">
+        <div className="flex w-full h-screen sticky top-0">
             <div className="w-full flex flex-row">
                 {/* Sidebar */}
                 <div className="min-w-[20%] flex flex-col">

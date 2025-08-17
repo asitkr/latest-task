@@ -22,7 +22,7 @@ const ParticipationChartCard = () => {
       </div>
 
       {/* Chart */}
-      <div className="w-full h-48">
+      <div className="w-full flex flex-row-reverse h-56">
         <ResponsiveContainer>
           <PieChart>
             <Pie
@@ -50,12 +50,10 @@ const ParticipationChartCard = () => {
             />
           </PieChart>
         </ResponsiveContainer>
-      </div>
 
-      {/* Legend */}
-      <div className="text-left mt-3 space-y-1 text-xs text-gray-700">
+        <div className="text-left w-40 mt-3 space-y-1 text-xs text-gray-700">
         {data.map((entry, index) => (
-          <div key={entry.name} className="flex items-center gap-2">
+          <div key={entry.name} className="w-full flex items-center gap-2">
             <span
               className="w-3 h-3 rounded-full inline-block"
               style={{ backgroundColor: COLORS[index] }}
@@ -64,6 +62,9 @@ const ParticipationChartCard = () => {
           </div>
         ))}
       </div>
+      </div>
+
+      {/* Legend */}
     </div>
   )
 }
