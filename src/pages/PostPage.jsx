@@ -7,7 +7,7 @@ const PostPage = () => {
     return (
         <div className="min-w-[20%] h-screen bg-gray-100 overflow-y-auto">
             {/* Header Section */}
-            <div className="w-full bg-white shadow-sm border-b border-gray-200 p-4 flex items-center justify-between sticky top-0 z-50">
+            <div className="w-full bg-white shadow-sm border-b border-gray-200 p-4 flex items-center justify-between sticky top-0 z-10">
                 {/* Search */}
                 <div className="relative w-full max-w-xl">
                     <Search className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" />
