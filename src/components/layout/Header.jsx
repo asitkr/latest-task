@@ -6,7 +6,6 @@ const ResearchModal = lazy(() => import("../ResearchModal"));
 
 const Header = () => {
     const [showModal, setShowModal] = useState(false);
-
     const { user } = useSelector((state) => state.auth);
 
     const handleResearchModal = () => {
