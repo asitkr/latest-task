@@ -1,19 +1,14 @@
 import { lazy, useState } from "react";
 import { CloudUploadIcon } from "lucide-react";
-import { useSelector } from "react-redux";
 
 const ResearchModal = lazy(() => import("../ResearchModal"));
 
 const Header = () => {
     const [showModal, setShowModal] = useState(false);
-    const { user } = useSelector((state) => state.auth);
 
     const handleResearchModal = () => {
         setShowModal(false)
     }
-
-    console.log(user);
-    
 
     return (
         <>
