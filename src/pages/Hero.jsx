@@ -163,7 +163,7 @@ const RightSidebar = lazy(() => import("./../components/RightSidebar"));
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen flex overflow-hidden">
+    <div className="w-full h-screen flex">
       {/* Sidebar */}
       <aside className="w-[20%] border-r bg-gray-100 h-full sticky top-0">
         <div className="h-full overflow-y-auto p-2 space-y-4">

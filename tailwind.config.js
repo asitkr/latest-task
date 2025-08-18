@@ -18,10 +18,18 @@ export default {
           "0%, 100%": { opacity: "0.2" },
           "50%": { opacity: "1" },
         },
+        blob: {
+          "0%": { transform: "translate(-100%, -100%) translate3d(0,0,0)" },
+          "25%": { transform: "translate(-100%, -100%) translate3d(100%,0,0)" },
+          "50%": { transform: "translate(-100%, -100%) translate3d(100%,100%,0)" },
+          "75%": { transform: "translate(-100%, -100%) translate3d(0,100%,0)" },
+          "100%": { transform: "translate(-100%, -100%) translate3d(0,0,0)" },
+        },
       },
       animation: {
         astronautFly: "astronautFly 12s linear infinite",
         starTwinkle: "starTwinkle 3s infinite ease-in-out",
+        blob: "blob 5s infinite ease",
       },
     },
   },

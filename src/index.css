@@ -45,7 +45,7 @@ html {
 * {
   scrollbar-width: thin;
   /* "auto" or "thin" */
-  scrollbar-color: #020234 #ebebeb;
+  scrollbar-color: #2323a1 #ebebeb;
   /* thumb color | track color */
 }
 
@@ -60,7 +60,7 @@ html {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #020234;
+  background-color: #2323a1;
   border-radius: 10px;
 }
 
