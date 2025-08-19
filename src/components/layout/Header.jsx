@@ -27,7 +27,7 @@ const Header = () => {
                     </p>
 
                     <div className="flex items-center gap-6">
-                        <button 
+                        <button
                             onClick={() => setShowModal(true)}
                             className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-5 py-[11px] rounded-full text-sm shadow-md transition">
                             <CloudUploadIcon className="w-6 h-6" />
@@ -48,6 +48,11 @@ const Header = () => {
                                 </span>
                             </button>
                             <div className="absolute right-0 mt-2 w-56 bg-white text-blue-900 rounded-lg shadow-lg p-4 text-sm hidden group-hover:block z-50">
+                                {/* This line will copy */}
+                                <div className="absolute top-0 right-20 transform -translate-y-full">
+                                    <div className="w-0 h-0 border-l-[8px] border-r-[8px] border-b-[8px] border-l-transparent border-r-transparent border-b-white"></div>
+                                </div>
+
                                 <p className="font-semibold text-base mb-2">User Profile</p>
                                 <div className="flex items-center space-x-3">
                                     <img

@@ -94,3 +94,22 @@ html {
   @apply opacity-100;
   transform: translateY(0);
 }
+
+/* Add below line */
+/* input color default */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important; /* your bg color */
+  box-shadow: 0 0 0 1000px #ffffff inset !important;         /* your bg color */
+  -webkit-text-fill-color: #000 !important;                  /* your text color */
+  caret-color: #000;                                         /* caret color */
+  transition: background-color 5000s ease-in-out 0s;         /* hack to delay */
+}
+
+/* for firefox */
+input:autofill {
+  background-color: #ffffff !important;
+  color: #000 !important;
+}

@@ -66,7 +66,7 @@ const Sidebar = () => {
             onClick={item.onClick}
             onMouseEnter={(e) => {
               const rect = e.currentTarget.getBoundingClientRect();
-              setCoords({ top: rect.top + rect.height / 2, left: rect.right + 10 });
+              setCoords({ top: rect.top + rect.height / 2, left: rect.right -10 });
               setHovered(item.label);
             }}
             onMouseLeave={() => setHovered(null)}
@@ -83,6 +83,10 @@ const Sidebar = () => {
             style={{ top: coords.top, left: coords.left, transform: "translateY(-50%)" }}
           >
             {hovered}
+            {/* below line will copy */}
+            <div className="absolute left-0 top-1/2 transform -translate-x-full -translate-y-1/2">
+                <div className="w-0 h-0 border-t-[6px] border-b-[6px] border-r-[6px] border-t-transparent border-b-transparent border-r-white"></div>
+              </div>
           </div>,
           document.body
         )}
