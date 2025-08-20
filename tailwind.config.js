@@ -25,13 +25,23 @@ export default {
           "75%": { transform: "translate(-100%, -100%) translate3d(0,100%,0)" },
           "100%": { transform: "translate(-100%, -100%) translate3d(0,0,0)" },
         },
+        animateC: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        animate: {
+          "0%": { transform: "rotate(45deg)" },
+          "100%": { transform: "rotate(405deg)" },
+        },
       },
       animation: {
         astronautFly: "astronautFly 12s linear infinite",
         starTwinkle: "starTwinkle 3s infinite ease-in-out",
-        blob: "blob 5s infinite ease",
+        animateC: "animateC 2s linear infinite",
+        animate: "animate 2s linear infinite",
       },
     },
   },
   plugins: [],
 }
+

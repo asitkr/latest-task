@@ -67,7 +67,7 @@ const RightSidebar = () => {
                 <div className="absolute top-[5px] left-[5px] right-[5px] bottom-[5px] rounded- bg-white/95 backdrop-blur-3xl outline outline-2 outline-white z-[2]" />
 
                 {/* Blob Animation */}
-                <div className="absolute top-1/2 left-1/2 w-[160px] h-[160px] rounded bg-[#4747e6] blur-xl animate-blob opacity-70 z-[1] -translate-x-1/2 -translate-y-1/2" />
+                <div className="absolute top-1/2 left-1/2 w-[160px] h-[160px] rounded bg-[#020234] blur-xl animate-blob opacity-70 z-[1] -translate-x-1/2 -translate-y-1/2" />
 
                 {/* Card Content */}
                 <div className="relative bg-transparent z-[3] flex flex-col w-full rounded">
