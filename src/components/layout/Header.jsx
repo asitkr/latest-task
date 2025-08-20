@@ -47,7 +47,8 @@ const Header = () => {
                                     Devanand Verma
                                 </span>
                             </button>
-                            <div className="absolute right-0 mt-2 w-56 bg-white text-blue-900 rounded-lg shadow-lg p-4 text-sm hidden group-hover:block z-50">
+                            {/* add this line */}
+                            <div className="absolute right-0 mt-2 w-56 bg-white text-blue-900 rounded-lg shadow-lg p-4 text-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                                 {/* This line will copy */}
                                 <div className="absolute top-0 right-20 transform -translate-y-full">
                                     <div className="w-0 h-0 border-l-[8px] border-r-[8px] border-b-[8px] border-l-transparent border-r-transparent border-b-white"></div>

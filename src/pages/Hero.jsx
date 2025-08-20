@@ -155,7 +155,7 @@
 
 
 import { lazy } from "react";
-import { ChevronDown, Search } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { contentData, instituteData, themesData } from "../utils";
 import SearchBar from "../components/SearchBar";
 
