@@ -157,6 +157,7 @@
 import { lazy } from "react";
 import { ChevronDown, Search } from "lucide-react";
 import { contentData, instituteData, themesData } from "../utils";
+import SearchBar from "../components/SearchBar";
 
 const PostPage = lazy(() => import("./PostPage"));
 const RightSidebar = lazy(() => import("./../components/RightSidebar"));
@@ -186,15 +187,7 @@ const Hero = () => {
           <div className="bg-white rounded shadow">
             <div className="flex justify-between items-center bg-[#020234] px-3 py-2 rounded-t">
               <h3 className="font-semibold text-white text-sm">Themes</h3>
-            </div>
-            <div className="relative p-2">
-              <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                <Search className="w-4 h-4 text-gray-400 ml-2" />
-              </div>
-              <input
-                className="w-full pl-9 pr-3 py-2 rounded-md border text-sm border-gray-300 focus:outline-blue-400"
-                placeholder="Search Themes..."
-              />
+              <SearchBar />
             </div>
             <div className="space-y-2 px-3 pb-3 max-h-[180px] overflow-y-auto">
               {themesData?.map((item) => (
@@ -218,15 +211,7 @@ const Hero = () => {
           <div className="bg-white rounded shadow">
             <div className="flex justify-between items-center bg-[#020234] px-3 py-2 rounded-t">
               <h3 className="font-semibold text-white text-sm">Institutes</h3>
-            </div>
-            <div className="relative p-2">
-              <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                <Search className="w-4 h-4 text-gray-400 ml-2" />
-              </div>
-              <input
-                className="w-full pl-9 pr-3 py-2 rounded-md border text-sm border-gray-300 focus:outline-blue-400"
-                placeholder="Search Institutes..."
-              />
+              <SearchBar />
             </div>
             <div className="space-y-2 px-3 pb-3 max-h-[180px] overflow-y-auto">
               {instituteData?.map((inst) => (
@@ -250,15 +235,7 @@ const Hero = () => {
           <div className="bg-white rounded shadow">
             <div className="flex justify-between items-center bg-[#020234] px-3 py-2 rounded-t">
               <h3 className="font-semibold text-white text-sm">Content Types</h3>
-            </div>
-            <div className="relative p-2">
-              <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                <Search className="w-4 h-4 text-gray-400 ml-2" />
-              </div>
-              <input
-                className="w-full pl-9 pr-3 py-2 rounded-md border text-sm border-gray-300 focus:outline-blue-400"
-                placeholder="Search Content Types..."
-              />
+              <SearchBar />
             </div>
             <div className="space-y-2 px-3 pb-3 max-h-[180px] overflow-y-auto">
               {contentData?.map((type) => (
