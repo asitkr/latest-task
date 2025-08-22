@@ -17,7 +17,7 @@ const SearchBar = () => {
       {/* Main Box */}
       <div
         className={`absolute right-0 -top-0.5 h-[40px] flex items-center justify-between rounded-full bg-white transition-all duration-300 ease-in-out overflow-hidden ${
-          isCollapsed ? "w-[36px] h-[36px]" : "w-[230px] h-[36px]"
+          isCollapsed ? "w-[40px] h-[36px]" : "w-[230px] h-[36px]"
         }`}
       >
         {/* Input (grows leftward) */}
@@ -30,7 +30,7 @@ const SearchBar = () => {
         />
 
         {/* Icon (always pinned right) */}
-        <div className="pr-2">
+        <div className="pr-2.5">
           <Search className="text-[#020234] w-5 h-5" />
         </div>
       </div>
