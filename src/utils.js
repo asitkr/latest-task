@@ -162,6 +162,15 @@ export const tabsData = [
     },
 ];
 
+export const searchTypes = [
+    { value: 'all', label: 'All' },
+    { value: 'users', label: 'Users' },
+    { value: 'products', label: 'Products' },
+    { value: 'articles', label: 'Articles' },
+    { value: 'images', label: 'Images' },
+    { value: 'videos', label: 'Videos' }
+  ];
+
 export const itemsPerPageOptions = [10, 20, 30, 50, 100];
 
 export const tableData = [

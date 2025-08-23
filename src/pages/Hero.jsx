@@ -154,7 +154,7 @@
 // export default Hero;
 
 
-import { lazy } from "react";
+import { lazy, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { contentData, instituteData, themesData } from "../utils";
 import SearchBar from "../components/SearchBar";
@@ -163,6 +163,12 @@ const PostPage = lazy(() => import("./PostPage"));
 const RightSidebar = lazy(() => import("./../components/RightSidebar"));
 
 const Hero = () => {
+  const [isDropdownRotate, setIsDropdownRotate] = useState([]);
+
+  const toggleDropdown = (id) => {
+    setIsDropdownRotate(isDropdownRotate === id ? null : id);
+  };
+
   return (
     <div className="w-full h-screen flex">
       {/* Sidebar */}
@@ -195,9 +201,15 @@ const Hero = () => {
                   key={item?.id}
                   className="bg-gray-50 rounded border px-3 py-2 text-sm text-blue-800"
                 >
-                  <summary className="flex justify-between items-center cursor-pointer font-medium">
+                  <summary
+                    className="flex justify-between items-center cursor-pointer font-medium"
+                    onClick={(e) => {
+                      e.preventDefault(); // prevent default details toggle
+                      toggleDropdown(item.id);
+                    }}
+                  >
                     {item?.name}
-                    <ChevronDown className="w-4 h-4 text-blue-600" />
+                    <ChevronDown className={`w-4 h-4 text-blue-600 transition-transform duration-200 ${isDropdownRotate ? 'rotate-180' : ''}`} />
                   </summary>
                   <p className="mt-2 text-xs text-gray-600">
                     {item?.description}

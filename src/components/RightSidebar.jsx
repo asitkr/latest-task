@@ -62,7 +62,7 @@ const RightSidebar = () => {
                 </div>
             </div> */}
 
-            <div className="relative min-w-[220px] rounded overflow-hidden shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff] flex flex-col z-[1111]">
+            <div className="relative min-w-[220px] rounded overflow-hidden flex flex-col z-[1111]">
                 {/* Background Glass Layer */}
                 <div className="absolute top-[5px] left-[5px] right-[5px] bottom-[5px] rounded- bg-white/95 backdrop-blur-3xl outline outline-2 outline-white z-[2]" />
 

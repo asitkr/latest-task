@@ -32,7 +32,7 @@ const Master = () => {
                 </div>
 
                 {/* Tab content */}
-                <div className="p-6 min-h-[200px]"><TabTable /></div>
+                <div className="p-4 min-h-[200px]"><TabTable /></div>
             </div>
         </div>
     )
